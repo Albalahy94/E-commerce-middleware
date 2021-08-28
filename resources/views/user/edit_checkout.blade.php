@@ -46,29 +46,29 @@
                             <h3 class="title">Billing address</h3>
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->first_name}}" type="text" name="first_name" placeholder="First Name">
+                            <input class="input" value="{{$checkouts->first_name}}" type="text" name="first_name" placeholder="First Name">
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->last_name}}"  type="text" name="last_name" placeholder="Last Name">
+                            <input class="input" value="{{$checkouts->last_name}}"  type="text" name="last_name" placeholder="Last Name">
                         </div>
                         <div class="form-group">
-                            <input class="input"  value="{{$checkouts[0]->email}}" type="email" name="email" placeholder="Email">
+                            <input class="input"  value="{{$checkouts->email}}" type="email" name="email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->address}}"  type="text" name="address" placeholder="Address">
+                            <input class="input" value="{{$checkouts->address}}"  type="text" name="address" placeholder="Address">
                         </div>
                         {{-- <div class="form-group"> --}}
                             <div class="form-group">
-                                <input class="input" value="{{$checkouts[0]->city}}" type="text" name="city" placeholder="City">
+                                <input class="input" value="{{$checkouts->city}}" type="text" name="city" placeholder="City">
                             </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->country}}"  type="text" name="country" placeholder="Country">
+                            <input class="input" value="{{$checkouts->country}}"  type="text" name="country" placeholder="Country">
                         </div>
                         {{-- <div class="form-group">
                             <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
                         </div> --}}
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->tel}}"  type="tel" name="tel" placeholder="Telephone">
+                            <input class="input" value="{{$checkouts->tel}}"  type="tel" name="tel" placeholder="Telephone">
                         </div>
                         {{-- <div class="form-group">
                             <div class="input-checkbox">
@@ -130,7 +130,7 @@
 
                     <!-- Order notes -->
                     <div class="order-notes">
-                        <textarea name="notes"  value="{{$checkouts[0]->notes}}" class="input" placeholder="Order Notes"></textarea>
+                        <textarea name="notes"  value="{{$checkouts->notes}}" class="input" placeholder="Order Notes"></textarea>
                     </div>
                     <!-- /Order notes -->
                     <button type="submit" class="primary-btn order-submit">Place order</button>

@@ -276,7 +276,7 @@ class HomeController extends Controller
         $order = Order::All()->where('user_id', $userid);
 
         $user_products =  User::find($userid)->getProducts;
-        $checkout = checkout::select('*')->get();
+        $checkout = checkout::select('*')->where('user_id', $userid)->get();
 
         $order_sum =  $order->sum('total_price');
         $cart_sum = User::find($userid)->getProducts->sum('price');
@@ -298,12 +298,13 @@ class HomeController extends Controller
         //     // return view('user.checkout');
         // } else {
         return view(
-            'user.checkout',
+            'user.edit_checkout',
             [
                 'cart_sum' => $cart_sum,
                 'order_sum' => $order_sum,
                 'products' => $products,
                 'orders' => $order,
+                'checkouts' => $checkout,
                 'carts' => $carts,
                 'user_products' => $user_products,
             ]
