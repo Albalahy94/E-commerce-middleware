@@ -12,4 +12,29 @@ class Order extends Model
     {
         return    $this->belongsTo(Product::class, 'product_id');
     }
+    public   function getPaymentMethodAttribute($value)
+    {
+        if ($value == 1)
+            return  'Direct Bank Transfer' 
+        ;
+        elseif ($value == 2) 
+            # code...
+            return  'Cheque Payment'
+        ;
+        elseif ($value == 3) 
+            # code..
+            return  'Paypal System'
+        ;
+        elseif ($value == 4) 
+            # code...
+            return  'Cash On Delivery'
+        ;
+        elseif ($value == 5) 
+            # code...
+            return  'Mobile Cash'
+        ;
+   
+        // return   $value ;
+    }
+       
 }

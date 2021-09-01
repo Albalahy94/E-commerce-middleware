@@ -17,6 +17,7 @@
                             <tr>
                               <th scope="col">Order ID</th>
                               <th scope="col">Name</th>
+                              <th scope="col">Product Count</th>
                               <th scope="col">Price</th>
                               <th scope="col"  colspan="2">
                 
@@ -32,14 +33,27 @@
                             <tr>
                               <th scope="row">{{ $cart ->id}}</th>
                               <td>{{ $cart->name}}</td>
+                              <th scope="col">
+                                <form action="{{route('add-to-orders', $cart->id)}}" method="post">
+                                    @csrf
+    
+                                <div class="order-col">
+                                    <div><strong class="order-total">
+                                        
+                                        <input type="number" value="1" name="Product_count" id="Product_count">
+                                        
+                                        <button  class="btn btn-success"><i class="far fa-check-square"></i> Order Now!</button>
+                                    </strong></div>
+                                </div>
+                                    
+                            </form>
+                              </th>
                               <td>{{ $cart->price}}</td>
                               <td>
-                                <form action="{{route('add-to-orders',  $cart->id)}}" method="post">
-                                    @csrf
-                                    <button class="btn btn-success"><i class="far fa-check-square"></i> Order Now!</button>
-                                </form>  
-                              </td>
-                              <td>
+                                
+                                
+                            </td>
+                                <td>
                                 <a class="btn btn-danger" href="{{route('delete-from-cart',  $cart->id)}}" onClick="return confirm('Are you sure ?')"><i class="far fa-trash-alt"></i>  Delete from cart</a>
   
                               </td>

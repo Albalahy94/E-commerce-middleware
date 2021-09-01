@@ -24,7 +24,7 @@ Route::group([
     Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
     Route::get('/showproducts{product_id}', [App\Http\Controllers\HomeController::class, 'showProducts'])->name('showproducts');
     Route::post('/add-to-cart{product_id}', [App\Http\Controllers\HomeController::class, 'addToCart'])->name('add-to-cart');
-    Route::get('/delete-from-cart{product_id}', [App\Http\Controllers\HomeController::class, 'addToOrders'])->name('delete-from-cart');
+    Route::get('/delete-from-cart{product_id}', [App\Http\Controllers\HomeController::class, 'deleteFromCart'])->name('delete-from-cart');
     Route::get('/cart{id?}', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart');
 
     Route::post('/add-to-orders{product_id}', [App\Http\Controllers\HomeController::class, 'addToOrders'])->name('add-to-orders');
@@ -32,6 +32,7 @@ Route::group([
 
 
     Route::get('/orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('orders');
+    Route::get('/finished-orders', [App\Http\Controllers\HomeController::class, 'finishedOrders'])->name('finished_orders');
     Route::get('/editorders', [App\Http\Controllers\HomeController::class, 'editorders'])->name('editorders');
     Route::post('/editorders', [App\Http\Controllers\HomeController::class, 'updateOrders'])->name('updateorders');
     Route::get('/deleteorders', [App\Http\Controllers\HomeController::class, 'deleteorders'])->name('deleteorders');
@@ -46,8 +47,8 @@ Route::group([
     Route::get('/category_tab', [App\Http\Controllers\HomeController::class, 'category_tab'])->name('category_tab');
     Route::get('/category_acc', [App\Http\Controllers\HomeController::class, 'category_acc'])->name('category_acc');
     Route::get('/pending-members', function () {
-        $orders=0;
-        return view('user.pendingmembers',['orders'=> $orders]);
+        $orders = 0;
+        return view('user.pendingmembers', ['orders' => $orders]);
     });
 
 

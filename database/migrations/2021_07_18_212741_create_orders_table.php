@@ -17,10 +17,11 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('product_id');
-            $table->string('delivery_status');
-            $table->string('cash_status');
-            $table->string('payment_method');
-            $table->string('total_price');
+            $table->string('delivery_status')->default('pending');
+            $table->string('cash_status')->default('pending');
+            $table->string('payment_method')->default(4);
+            $table->integer('Product_count')->default(1);
+            $table->integer('total_price');
 
             $table->timestamps();
         });

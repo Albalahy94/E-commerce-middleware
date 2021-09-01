@@ -15,7 +15,7 @@
                         font-weight: bolder;
                         font-size: 20px;
                         line-height: 50%;" class="alert alert-success">
-                            Total :  {{ $order_sum_pending  }}  $
+                            Total :  {{ $order_sum_done  }}  $
                         
                           </div>  
                     
@@ -33,7 +33,7 @@
                           </thead>
                           <tbody>
                               
-							@foreach ( $order_pending as  $i=> $product  ) 
+							@foreach ( $order_done as  $i=> $product  ) 
                             {{-- && $carts as $cart --}}
                             <tr>
                               <th scope="row">{{$product->id}}</th>

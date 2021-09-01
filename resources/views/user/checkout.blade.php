@@ -32,9 +32,8 @@
 <div class="section">
     <!-- container -->
     <div class="container">
-        <form action="{{route('cofirmcheckout')}}" method="post">
+    <form action="{{route('cofirmcheckout')}}" method="post">
         @csrf
-
         <!-- row -->
         <div class="row">
 
@@ -47,29 +46,29 @@
                             <h3 class="title">Billing address</h3>
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->first_name}}" type="text" name="first_name" placeholder="First Name">
+                            <input class="input"  type="text" name="first_name" placeholder="First Name">
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->last_name}}"  type="text" name="last_name" placeholder="Last Name">
+                            <input class="input"  type="text" name="last_name" placeholder="Last Name">
                         </div>
                         <div class="form-group">
-                            <input class="input"  value="{{$checkouts[0]->email}}" type="email" name="email" placeholder="Email">
+                            <input class="input"  type="email" name="email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->address}}"  type="text" name="address" placeholder="Address">
+                            <input class="input"  type="text" name="address" placeholder="Address">
                         </div>
                         {{-- <div class="form-group"> --}}
                             <div class="form-group">
-                                <input class="input" value="{{$checkouts[0]->city}}" type="text" name="city" placeholder="City">
+                                <input class="input"  type="text" name="city" placeholder="City">
                             </div>
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->country}}"  type="text" name="country" placeholder="Country">
+                            <input class="input"   type="text" name="country" placeholder="Country">
                         </div>
                         {{-- <div class="form-group">
                             <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
                         </div> --}}
                         <div class="form-group">
-                            <input class="input" value="{{$checkouts[0]->tel}}"  type="tel" name="tel" placeholder="Telephone">
+                            <input class="input"   type="tel" name="tel" placeholder="Telephone">
                         </div>
                         {{-- <div class="form-group">
                             <div class="input-checkbox">
@@ -131,7 +130,7 @@
 
                     <!-- Order notes -->
                     <div class="order-notes">
-                        <textarea name="notes"  value="{{$checkouts[0]->notes}}" class="input" placeholder="Order Notes"></textarea>
+                        <textarea name="notes"   class="input" placeholder="Order Notes"></textarea>
                     </div>
                     <!-- /Order notes -->
             </div>
@@ -162,8 +161,9 @@
                             <div><strong>TOTAL</strong></div>
                             <div><strong class="order-total"></strong>{{(($order_sum_pending))}}</div>
                         </div>
+
                     </div>
-                 <div class="payment-method">
+                    <div class="payment-method">
                         <div class="input-radio">
                             <input type="radio" value="1" name="payment" id="payment-1">
                             <label for="payment-1">
@@ -216,7 +216,6 @@
                         </div>
 
                     </div>
-
                     <div class="input-checkbox">
                         <input type="checkbox" id="terms" checked required>
                         <label for="terms">
@@ -226,11 +225,12 @@
                     </div>
                 </div>
                 <!-- /Order Details -->
+                
+                
             </div>
             <!-- /row -->
-                    <button type="submit" class="primary-btn order-submit">Place order</button>
+        <button type="submit" class="primary-btn order-submit">Place order</button>
     </form>
-
         </div>
         <!-- /container -->
     </div>

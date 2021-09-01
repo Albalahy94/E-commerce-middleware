@@ -75,7 +75,7 @@
             <!-- row -->
             <div class="row">
                 <!-- LOGO -->
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="header-logo" >
                         <a href="#" class="logo">
                             <a style="color: #ffffff;" class="navbar-brand" href="{{ url('/') }}">
@@ -87,7 +87,7 @@
                 </div>
                 <!-- /LOGO -->
                 <!-- SEARCH BAR -->
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="header-search">
                         <form>
                             {{-- <select class="input-select">
@@ -104,17 +104,37 @@
  @auth
 
                 <!-- ACCOUNT -->
-                <div class="col-md-3 clearfix">
+                <div class="col-md-5 clearfix">
                     <div class="header-ctn">
                         <!-- Wishlist -->
                         <div>
                             <a href="/orders">
                                 <i class="fa fa-heart-o"></i>
                                 <span>Your Orders</span>
-                                <div class="qty">{{count($orders)}} </div>
+                                <div class="qty">{{count($order_pending)}} </div>
                             </a>
                         </div>
                         <!-- /Wishlist -->
+                        <!-- finished_orders -->
+                        <div>
+                            <a href="/finished-orders">
+                                <i class="far fa-check-square"></i>
+                                <span>Finished </span>
+                                <div class="qty">{{count($order_done)}} </div>
+                            </a>
+                        </div>
+                        <!-- /finished_orders -->
+
+
+                        <!-- checkout -->
+                        <div>
+                            <a href="/checkout">
+                                <i class="far fa-credit-card"></i>
+                                <span>Checkout</span>
+                            </a>
+                        </div>
+                        <!-- /checkout -->
+
 
                         <!-- Cart -->
                         <div class="dropdown">
