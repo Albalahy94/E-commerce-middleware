@@ -23,7 +23,7 @@
                         <thead>
                             <tr>
                               <th scope="col">Order ID</th>
-                              <th scope="col">Name</th>
+                              {{-- <th scope="col">Name</th> --}}
                               <th scope="col">Count</th>
                               <th scope="col">Price</th>
                               <th scope="col">Status </th>
@@ -37,7 +37,7 @@
                             {{-- && $carts as $cart --}}
                             <tr>
                               <th scope="row">{{$product->id}}</th>
-                              <td>{{ $product->name}}</td>
+                              {{-- <td>{{ $product->name}}</td> --}}
                               <td>{{ $product->Product_count}}</td>
                               <td>{{ $product->total_price}}</td>
                               <td>{{ $product->delivery_status}}</td>

@@ -151,12 +151,12 @@ class HomeController extends Controller
         // return $request->Product_count;
         // return  $cart = Cart::find($product_id);
         // $product = Product::find($cart);
-        // $product[0]->name;
+        $product[0]->name;
         $newCart = Order::insert([
             'user_id' => $userid,
             'product_id' => $product[0]->id,
-            'name' => $product[0]->name,
             'Product_count' => $request->Product_count,
+            // 'name' => $product[0]->name,
             // 'delivery_status' => 'pending',
             // 'cash_status' => 'pending',
             // 'payment_method' => 'pending',
@@ -168,14 +168,14 @@ class HomeController extends Controller
     }
     public function AddOrders()
     {
-         $cart = Cart::All()[0];
+        $cart = Cart::All()[0];
         $product = Product::find($cart)[0];
         $userid =  Auth::user()->id;
 
         $newCart = Order::insert([
             'user_id' => $userid,
             'product_id' => $product->id,
-            'name' => $product->name,
+            // 'name' => $product->name,
             // 'delivery_status' => 'pending',
             // 'cash_status' => 'pending',
             // 'payment_method' => 'pending',
