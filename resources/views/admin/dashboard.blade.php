@@ -150,7 +150,7 @@
                                             <td>{{Str::limit($product->description,  10, '...') }}  </td>
                                             <td>{{Str::limit($product->price,  10, '...') }}  </td>
                                             <td>{{Str::limit($product->category,  10, '...') }} </td>
-                                            <td>  <img width="100px"  height="100px" src="{{asset('images/products/' . $product->gallary)}}" alt="{{$product->name}}"></td>
+                                            <td>  <img width="100px"  height="100px" src="{{asset($product->gallary)}}" alt="{{$product->name}}"></td>
                                                  {{-- {{Str::limit($product->gallary,  10, '...') }}  --}}
                                             <td style="text-align: center"> <a href="{{route('admin.show-product' , $product->id)}}"> <i class="far fa-eye"></i> </a> </td>
                                             <td style="text-align: center"> <a href="{{route('admin.edit-product' , $product->id)}}"> <i class="far fa-edit"></i> </a> </td>
