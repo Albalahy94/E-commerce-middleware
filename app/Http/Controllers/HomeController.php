@@ -78,11 +78,11 @@ class HomeController extends Controller
     {
         $products = Product::All();
 
+        $userid =  Auth::user()->id;
         $order_sum_pending = Order::All()->where('user_id', $userid)->where('delivery_status', 'pending')->sum('total_price');
         $order_sum_done = Order::All()->where('user_id', $userid)->where('delivery_status', 'done')->sum('total_price');
 
 
-        $userid =  Auth::user()->id;
         $carts = Cart::ALL()->where('user_id', $userid);
 
 

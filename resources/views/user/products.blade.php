@@ -177,7 +177,7 @@
 							<h3 class="aside-title">Top selling</h3>
 							<div class="product-widget">
 								<div class="product-img">
-									<img  src="{{asset('images/products/' . $product->gallary)}}" alt="{{$product->name}}">
+									<img  src="{{asset($product->gallary)}}" alt="{{$product->name}}">
 								</div>
 								<div class="product-body">
 									<p class="product-category">{{ $product->category}}</p>
@@ -230,7 +230,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="{{asset('images/products/' . $product->gallary)}}" alt="{{$product->name}}">
+										<img src="{{asset($product->gallary)}}" alt="{{$product->name}}">
 										<div class="product-label">
 											<span class="sale">-10%</span>
 											<span class="new">NEW</span>
