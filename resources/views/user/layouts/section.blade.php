@@ -32,7 +32,7 @@
 										@foreach ( $products as  $product)
 										<div class="product">
 											<div class="product-img">
-												<img src="{{asset('images/products/' . $product->gallary)}}" alt="{{$product->name}}">
+												<img src="{{asset($product->gallary)}}" alt="{{$product->name}}">
 												<div class="product-label">
 													<span class="sale">-10%</span>
 													<span class="new">NEW</span>

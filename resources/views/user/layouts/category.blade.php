@@ -10,7 +10,7 @@
 						<a href="{{route('category_lab')}}" class="cta-btn">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="{{asset('images/products/1626697815.png')}}" alt="">
+								<img src="{{asset('images/products/l1.png')}}" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Collection</h3>
@@ -27,7 +27,7 @@
 						<a href="{{route('category_acc')}}" class="cta-btn">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="{{asset('images/products/1626697861.png')}}"  alt="">
+								<img src="{{asset('images/products/h1.png')}}"  alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Accessories<br>Collection</h3>
@@ -45,7 +45,7 @@
 						<a href="{{route('category_tab')}}" class="cta-btn">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="{{asset('images/products/1626697961.png')}}"  alt="">
+								<img src="{{asset('images/products/t1.png')}}"  alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Smartphones<br>Collection</h3>
