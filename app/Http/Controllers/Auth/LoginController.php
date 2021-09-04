@@ -63,7 +63,7 @@ class LoginController extends Controller
 
             if ($find_user) {
                 Auth::login($find_user);
-                return redirect('home');
+                return redirect('/');
             } else {
 
                 $user = new User;
@@ -73,7 +73,7 @@ class LoginController extends Controller
                 $user->save();
                 // $social_user->password;
                 Auth::login($user);
-                return redirect('home');
+                return redirect('/');
             }
         } else {
             $token = $social_user->token;
@@ -81,7 +81,7 @@ class LoginController extends Controller
 
             if ($find_user) {
                 Auth::login($find_user);
-                return redirect('home');
+                return redirect('/');
             } else {
 
                 $user = new User;
@@ -91,7 +91,7 @@ class LoginController extends Controller
                 $user->save();
                 // $social_user->password;
                 Auth::login($user);
-                return redirect('home');
+                return redirect('/');
             }
         }
     }
