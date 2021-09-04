@@ -280,7 +280,7 @@ class AdminController extends Controller
         // $request->gallary->move($path, $file_name);
 
         $neworder = new Order;
-        $neworder->name = $request->name;
+        // $neworder->name = $request->name;
         $neworder->user_id = $request->user_id;
         $neworder->product_id = $request->product_id;
         $neworder->delivery_status = $request->delivery_status;
@@ -317,7 +317,7 @@ class AdminController extends Controller
         // $request->gallary->move($path, $file_name);
 
         $order->update([
-            'name' => $request->name,
+            // 'name' => $request->name,
             'user_id' => $request->user_id,
             'product_id' => $request->product_id,
             'delivery_status' => $request->delivery_status,

@@ -168,22 +168,41 @@ class HomeController extends Controller
     }
     public function AddOrders()
     {
-        $cart = Cart::All()[0];
-        $product = Product::find($cart)[0];
         $userid =  Auth::user()->id;
 
-        $newCart = Order::insert([
-            'user_id' => $userid,
-            'product_id' => $product->id,
-            // 'name' => $product->name,
-            // 'delivery_status' => 'pending',
-            // 'cash_status' => 'pending',
-            // 'payment_method' => 'pending',
-            'total_price' => $product->price,
-        ]);
-        Cart::select('*')->delete();
-        return back()->with(['success' => 'Done']);
-        // return view('user.showproducts');
+        $cart = Cart::select('*')->where('user_id', $userid)->get();
+        $product = Product::find($cart);
+        try {
+            //code...
+            DB::beginTransaction();
+            foreach ($product as $prod) {
+
+
+                $newCart = Order::create(
+                    [
+
+                        'user_id' => $userid,
+                        'product_id' => $prod->id,
+                        // 'Product_count' => $request->Product_count,
+                        // 'name' => $product[0]->name,
+                        // 'delivery_status' => 'pending',
+                        // 'cash_status' => 'pending',
+                        // 'payment_method' => 'pending',
+                        // 'total_price' => (($product[0]->price) * ($request->Product_count)),
+                        'total_price' => $prod->price,
+
+                    ],
+                );
+            }
+
+            Cart::select('*')->where('user_id', $userid)->delete();
+            // return view('user.showproducts');
+            DB::commit();
+            return back()->with(['success' => 'Done']);
+        } catch (\Exception $ex) {
+            //throw $th;
+            DB::rollback();
+        }
     }
     public function orders()
     {
@@ -258,12 +277,12 @@ class HomeController extends Controller
     {
         $products = Order::All();
 
+        $userid =  Auth::user()->id;
 
 
         $order_sum_pending = Order::All()->where('user_id', $userid)->where('delivery_status', 'pending')->sum('total_price');
         $order_sum_done = Order::All()->where('user_id', $userid)->where('delivery_status', 'done')->sum('total_price');
 
-        $userid =  Auth::user()->id;
         $carts = Cart::ALL()->where('user_id', $userid);
 
 
@@ -274,7 +293,8 @@ class HomeController extends Controller
         $cart_sum = User::find($userid)->getProducts->sum('price');
 
         return view('user.editorders', [
-            'order_sum' => $order_sum,
+            'order_sum_pending' => $order_sum_pending,
+            'order_sum_done' => $order_sum_done,
             'cart_sum' => $cart_sum,
             'products' => $products,
             'carts' => $carts,
@@ -326,12 +346,12 @@ class HomeController extends Controller
 
         // $carts = Cart::ALL();
 
+        $userid =  Auth::user()->id;
 
         // $order = Order::All();
         $order_sum_pending = Order::All()->where('user_id', $userid)->where('delivery_status', 'pending')->sum('total_price');
         $order_sum_done = Order::All()->where('user_id', $userid)->where('delivery_status', 'done')->sum('total_price');
 
-        $userid =  Auth::user()->id;
         $carts = Cart::ALL()->where('user_id', $userid);
 
 
