@@ -25,6 +25,31 @@ class Productseeder extends Seeder
 
             ],
             [
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '3000',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
+
+            ],
+            [
+                'name' => 'laptop',
+                'description' => 'laptop',
+                'price'  => '10000',
+                'category' => 'lab',
+                'gallary' => 'images/products/l2.png',
+
+            ],
+            [
+                'name' => 'hand phone',
+                'description' => 'hand',
+                'price'  => '300',
+                'category' => 'accessories',
+                'gallary' => 'images/products/h1.png',
+
+            ],
+
+            [
                 'name' => 'laptop',
                 'description' => 'laptop',
                 'price'  => '4000',
@@ -33,22 +58,6 @@ class Productseeder extends Seeder
 
             ],
 
-            [
-                'name' => 'laptop',
-                'description' => 'laptop',
-                'price'  => '5000',
-                'category' => 'lab',
-                'gallary' => 'images/products/l1.png',
-
-            ],
-            [
-                'name' => 'laptop',
-                'description' => 'laptop',
-                'price'  => '6000',
-                'category' => 'lab',
-                'gallary' => 'images/products/l1.png',
-
-            ],
             [
                 'name' => 'laptop',
                 'description' => 'laptop',
@@ -74,62 +83,6 @@ class Productseeder extends Seeder
 
             ],
             [
-                'name' => 'laptop',
-                'description' => 'laptop',
-                'price'  => '10000',
-                'category' => 'lab',
-                'gallary' => 'images/products/l2.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '3000',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '2500',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '2500',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '2500',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '2500',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
-                'name' => 'tablet',
-                'description' => 'tablet',
-                'price'  => '2500',
-                'category' => 'tab',
-                'gallary' => 'images/products/t1.png',
-
-            ],
-            [
                 'name' => 'tablet',
                 'description' => 'tablet',
                 'price'  => '2500',
@@ -156,9 +109,59 @@ class Productseeder extends Seeder
             [
                 'name' => 'hand phone',
                 'description' => 'hand',
-                'price'  => '300',
+                'price'  => '450',
                 'category' => 'accessories',
                 'gallary' => 'images/products/h1.png',
+
+            ],
+
+            [
+                'name' => 'laptop',
+                'description' => 'laptop',
+                'price'  => '5000',
+                'category' => 'lab',
+                'gallary' => 'images/products/l1.png',
+
+            ],
+            [
+                'name' => 'laptop',
+                'description' => 'laptop',
+                'price'  => '6000',
+                'category' => 'lab',
+                'gallary' => 'images/products/l1.png',
+
+            ],
+
+            [
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '2500',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
+
+            ],
+            [
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '2500',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
+
+            ],
+            [
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '2500',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
+
+            ],
+            [
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '2500',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
 
             ],
             [
@@ -178,15 +181,15 @@ class Productseeder extends Seeder
                 'gallary' => 'images/products/h1.png',
 
             ],
-
             [
-                'name' => 'hand phone',
-                'description' => 'hand',
-                'price'  => '450',
-                'category' => 'accessories',
-                'gallary' => 'images/products/h1.png',
+                'name' => 'tablet',
+                'description' => 'tablet',
+                'price'  => '2500',
+                'category' => 'tab',
+                'gallary' => 'images/products/t1.png',
 
             ],
+
             [
                 'name' => 'hand phone',
                 'description' => 'hand',
