@@ -159,11 +159,11 @@
                                     </div>
                                     @endforeach
 
-                                   
                                 </div>
                                 <div class="cart-summary">
                                     <small>{{count($carts)}} Item(s) selected</small>
                                     <h5>SUBTOTAL: {{(($cart_sum))}} $ </h5>
+                                    <a href="{{route('add-orders')}}" class="btn btn-success"><i class="far fa-check-square"></i> Order All Now!</a>
                                 </div>
                                 <div class="cart-btns">
                                     <a href="{{route('cart')}}">View Cart</a>
