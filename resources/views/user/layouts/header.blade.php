@@ -7,7 +7,7 @@
             <ul class="header-links pull-left">
                 <li><a href="tel:01067481561"><i class="fa fa-phone"></i> 010-6748-1567</a></li>
                 <li><a href="mailto:sh.elbalahy@gmail.com"><i class="fa fa-envelope-o"></i> sh.elbalahy@gmail.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Egypt </a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i> {{__('store.Egypt')}} </a></li>
             </ul>
             <ul class="header-links pull-right">
                 <li>
@@ -17,13 +17,13 @@
                     @guest
                         @if (Route::has('login'))
                             <li class="">
-                                <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="" href="{{ route('login') }}">{{__('store.Login') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="">
-                                <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="" href="{{ route('register') }}">{{__('store.Register') }}</a>
                             </li>
                         @endif
                     @else
@@ -36,7 +36,7 @@
                                 <a style="    color: #15161D; " class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{__('store.Logout') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -96,7 +96,7 @@
                                 <option value="1">Category 02</option>
                             </select> --}}
                             <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
+                            <button class="search-btn">{{__('store.Search')}}</button>
                         </form>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         <div>
                             <a href="/orders">
                                 <i class="fa fa-heart-o"></i>
-                                <span>Your Orders</span>
+                                <span>{{__('store.Your Orders')}}</span>
                                 <div class="qty">{{count($order_pending)}} </div>
                             </a>
                         </div>
@@ -119,7 +119,7 @@
                         <div>
                             <a href="/finished-orders">
                                 <i class="far fa-check-square"></i>
-                                <span>Finished </span>
+                                <span>{{__('store.Finished')}}</span>
                                 <div class="qty">{{count($order_done)}} </div>
                             </a>
                         </div>
@@ -130,7 +130,7 @@
                         <div>
                             <a href="/checkout">
                                 <i class="far fa-credit-card"></i>
-                                <span>Checkout</span>
+                                <span>{{__('store.Checkout')}}</span>
                             </a>
                         </div>
                         <!-- /checkout -->
@@ -140,7 +140,7 @@
                         <div class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span>Your Cart</span>
+                                <span>{{__('store.Your Cart')}}</span>
                                 <div class="qty">{{count($carts)}}</div>
                             </a>
                             <div class="cart-dropdown">
@@ -161,13 +161,13 @@
 
                                 </div>
                                 <div class="cart-summary">
-                                    <small>{{count($carts)}} Item(s) selected</small>
-                                    <h5>SUBTOTAL: {{(($cart_sum))}} $ </h5>
-                                    <a href="{{route('add-orders')}}" class="btn btn-success"><i class="far fa-check-square"></i> Order All Now!</a>
+                                    <small>{{count($carts)}} {{__('store.Item(s) selected')}}</small>
+                                    <h5>{{__('store.SUBTOTAL:')}} {{(($cart_sum))}} $ </h5>
+                                    <a href="{{route('add-orders')}}" class="btn btn-success"><i class="far fa-check-square"></i> {{__('store.Order All Now!')}}</a>
                                 </div>
                                 <div class="cart-btns">
-                                    <a href="{{route('cart')}}">View Cart</a>
-                                    <a href="{{route('checkout')}}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('cart')}}">{{__('store.View Cart')}}</a>
+                                    <a href="{{route('checkout')}}">{{__('store.Checkout')}}  <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>

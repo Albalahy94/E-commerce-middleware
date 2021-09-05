@@ -11,11 +11,11 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">All Categories</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Headphones</a></li>
-							<li class="active">Product name goes here</li>
+							<li><a href="#">{{__('store.Home')}}</a></li>
+							<li><a href="#">{{__('store.All Categories')}}</a></li>
+							<li><a href="#">{{__('store.Accessories')}}</a></li>
+							<li><a href="#">{{__('store.Headphones')}}</a></li>
+							<li class="active">{{__('store.Product name goes here')}}</li>
 						</ul>
 					</div>
 				</div>
@@ -89,35 +89,35 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-o"></i>
 								</div>
-								<a class="review-link" href="#">10 Review(s) | Add your review</a>
+								<a class="review-link" href="#">{{__('store.10 Review(s) | Add your review')}}</a>
 							</div>
 							<div>
 								<h3 class="product-price"> {{ $product->price}} <del class="product-old-price"> {{ $product->price}}</del></h3>
-								<span class="product-available">In Stock</span>
+								<span class="product-available">{{__('store.In Stock')}}</span>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>{{__('store.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')}}</p>
 
 							<div class="product-options">
 								<label>
-									Size
+									{{__('store.Size')}}
 									<select class="input-select">
 										<option value="0">X</option>
 										<option value="0">X</option>
 									</select>
 								</label>
 								<label>
-									Color
+									{{__('store.Color')}}
 									<select class="input-select">
-										<option value="0">Red</option>
-										<option value="0">Red</option>
-										<option value="0">Red</option>
+										<option value="0">{{__('store.Red')}}</option>
+										<option value="0">{{__('store.Red')}}</option>
+										<option value="0">{{__('store.Red')}}</option>
 									</select>
 								</label>
 							</div>
 
 							<div class="add-to-cart">
 								<div class="qty-label">
-									Qty
+									{{__('store.Qty')}}
 									<div class="input-number">
 										<input type="number">
 										<span class="qty-up">+</span>
@@ -127,7 +127,7 @@
 
 								<form action="{{route('add-to-cart', $product->id)}}" method="post">
 									@csrf
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> {{__('store.add to cart')}}</button>
 								</form>
 														</div>
 
@@ -137,12 +137,12 @@
 							</ul>
 
 							<ul class="product-links">
-								<li>Category:</li>
+								<li>{{__('store.Category')}}:</li>
 								<li><a href="#">{{ $product->category}}</a></li>
 							</ul>
 
 							<ul class="product-links">
-								<li>Share:</li>
+								<li>{{__('store.Share')}}:</li>
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -158,9 +158,9 @@
 						<div id="product-tab">
 							<!-- product tab nav -->
 							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+								<li class="active"><a data-toggle="tab" href="#tab1">{{__('store.Description')}}</a></li>
+								<li><a data-toggle="tab" href="#tab2">{{__('store.Details')}}</a></li>
+								<li><a data-toggle="tab" href="#tab3">{{__('store.Reviews')}} (3)</a></li>
 							</ul>
 							<!-- /product tab nav -->
 
@@ -170,7 +170,7 @@
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>{{('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')}}</p>
 										</div>
 									</div>
 								</div>
@@ -180,7 +180,7 @@
 								<div id="tab2" class="tab-pane fade in">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>{{__('store.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')}}</p>
 										</div>
 									</div>
 								</div>
@@ -279,8 +279,8 @@
 												<ul class="reviews">
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
+															<h5 class="name">{{__('store.John')}}</h5>
+															<p class="date">{{__('store.27 DEC 2018, 8:0 PM')}}</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
@@ -290,13 +290,13 @@
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p>{{__('store.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua')}}</p>
 														</div>
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
+															<h5 class="name">{{__('store.John')}}</h5>
+															<p class="date">{{__('store.27 DEC 2018, 8:0 PM')}}</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
@@ -306,13 +306,13 @@
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p>{{__('store.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua')}}</p>
 														</div>
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
+															<h5 class="name">{{__('store.John')}}</h5>
+															<p class="date">{{__('store.27 DEC 2018, 8:0 PM')}}</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
@@ -322,7 +322,7 @@
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p>{{__('store.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua')}}</p>
 														</div>
 													</li>
 												</ul>
@@ -345,7 +345,7 @@
 													<input class="input" type="email" placeholder="Your Email">
 													<textarea class="input" placeholder="Your Review"></textarea>
 													<div class="input-rating">
-														<span>Your Rating: </span>
+														<span>{{__('store.Your Rating')}}: </span>
 														<div class="stars">
 															<input id="star5" name="rating" value="5" type="radio"><label for="star5"></label>
 															<input id="star4" name="rating" value="4" type="radio"><label for="star4"></label>
@@ -354,7 +354,7 @@
 															<input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
 														</div>
 													</div>
-													<button class="primary-btn">Submit</button>
+													<button class="primary-btn">{{__('store.Submit')}}</button>
 												</form>
 											</div>
 										</div>
@@ -383,7 +383,7 @@
 
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="title">Related Products</h3>
+							<h3 class="title">{{__('store.Related Products')}}</h3>
 						</div>
 					</div>
 
@@ -405,16 +405,16 @@
 								<div class="product-rating">
 								</div>
 								<div class="product-btns">
-									<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-									<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-									<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+									<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">{{__('store.add to wishlist')}}</span></button>
+									<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">{{__('store.add to compare')}}</span></button>
+									<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">{{__('store.quick view')}}</span></button>
 								</div>
 							</div>
 							<div class="add-to-cart">
 
 								<form action="{{route('add-to-cart', $product->id)}}" method="post">
 									@csrf
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> {{__('store.add to cart')}}</button>
 								</form>
 														</div>
 						</div>

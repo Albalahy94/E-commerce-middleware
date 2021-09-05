@@ -15,10 +15,10 @@
         <!-- row -->
         <div class="row">
             <div class="col-md-12">
-                <h3 class="breadcrumb-header">Checkout</h3>
+                <h3 class="breadcrumb-header">{{__('store.Checkout')}}</h3>
                 <ul class="breadcrumb-tree">
-                    <li><a href="#">Home</a></li>
-                    <li class="active">Checkout</li>
+                    <li><a href="#">{{__('store.Home')}}</a></li>
+                    <li class="active">{{__('store.Checkout')}}</li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
                     <!-- Billing Details -->
                     <div class="billing-details">
                         <div class="section-title">
-                            <h3 class="title">Billing address</h3>
+                            <h3 class="title">{{__('store.Billing address')}}</h3>
                         </div>
                         <div class="form-group">
                             <input class="input" value="{{$checkouts[0]->first_name}}" type="text" name="first_name" placeholder="First Name">
@@ -139,12 +139,12 @@
                 <!-- Order Details -->
                 <div class="col-md-5 order-details">
                     <div class="section-title text-center">
-                        <h3 class="title">Your Order</h3>
+                        <h3 class="title">{{__('store.Your Order')}}</h3>
                     </div>
                     <div class="order-summary">
                         <div class="order-col">
-                            <div><strong>PRODUCT</strong></div>
-                            <div><strong>TOTAL</strong></div>
+                            <div><strong>{{__('store.PRODUCT')}}</strong></div>
+                            <div><strong>{{__('store.TOTAL')}}</strong></div>
                         </div>
                         @foreach ($products as $order)
                         <div class="order-products">
@@ -155,11 +155,11 @@
                         </div>
                         @endforeach
                         <div class="order-col">
-                            <div>Shiping</div>
-                            <div><strong> <del>100 $</del> FREE</strong></div>
+                            <div>{{__('store.Shiping')}}</div>
+                            <div><strong> <del>100 $</del> {{__('store.FREE')}}</strong></div>
                         </div>
                         <div class="order-col">
-                            <div><strong>TOTAL</strong></div>
+                            <div><strong>{{__('store.TOTAL')}}</strong></div>
                             <div><strong class="order-total"></strong>{{(($order_sum_pending))}}</div>
                         </div>
                     </div>
@@ -168,50 +168,50 @@
                             <input type="radio" value="1" name="payment" id="payment-1">
                             <label for="payment-1">
                                 <span></span>
-                                Direct Bank Transfer
+                                {{__('store.Direct Bank Transfer')}}
                             </label>
                             <div class="caption">
-                                <p>Master / VISA </p>
+                                <p>{{__('store.Master / VISA')}} </p>
                             </div>
                         </div>
                         <div class="input-radio">
                             <input type="radio" value="2" name="payment" id="payment-2">
                             <label for="payment-2">
                                 <span></span>
-                                Cheque Payment
+                                {{__('store.Cheque Payment')}}
                             </label>
                             <div class="caption">
-                                <p>Cheque.</p>
+                                <p>{{__('store.Cheque.')}}</p>
                             </div>
                         </div>
                         <div class="input-radio">
                             <input type="radio"value="3" name="payment" id="payment-3">
                             <label for="payment-3">
                                 <span></span>
-                                Paypal System
+                                {{__('store.Paypal System')}}
                             </label>
                             <div class="caption">
-                                <p>Paypal.</p>
+                                <p>{{__('store.Paypal.')}}</p>
                             </div>
                         </div>
                         <div class="input-radio">
                             <input type="radio"value="4" name="payment" id="payment-4">
                             <label for="payment-4">
                                 <span></span>
-                                Cash On Delivery 
+                                {{__('store.Cash On Delivery')}} 
                             </label>
                             <div class="caption">
-                                <p>Cash On Delivery.</p>
+                                <p>{{__('store.Cash On Delivery.')}}</p>
                             </div>
                         </div>
                         <div class="input-radio">
                             <input type="radio" value="5" name="payment" id="payment-5">
                             <label for="payment-5">
                                 <span></span>
-                                Mobile Cash
+                                {{__('store.Mobile Cash')}}
                             </label>
                             <div class="caption">
-                                <p>Vodafone Cash / Orange Cash / Etisalat Cash.</p>
+                                <p>{{__('store.Vodafone Cash / Orange Cash / Etisalat Cash.')}}</p>
                             </div>
                         </div>
 
@@ -221,14 +221,14 @@
                         <input type="checkbox" id="terms" checked required>
                         <label for="terms">
                             <span></span>
-                            I've read and accept the <a href="#">terms & conditions</a>
+                            {{__('store.I\'ve read and accept the')}} <a href="#">{{__('store.terms & conditions')}}</a>
                         </label>
                     </div>
                 </div>
                 <!-- /Order Details -->
             </div>
             <!-- /row -->
-                    <button type="submit" class="primary-btn order-submit">Place order</button>
+                    <button type="submit" class="primary-btn order-submit">{{__('store.Place order')}}</button>
     </form>
 
         </div>

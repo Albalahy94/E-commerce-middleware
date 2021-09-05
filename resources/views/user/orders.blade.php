@@ -15,19 +15,19 @@
                         font-weight: bolder;
                         font-size: 20px;
                         line-height: 50%;" class="alert alert-success">
-                            Total :  {{ $order_sum_pending  }}  $
+                            {{__('store.Total')}} :  {{ $order_sum_pending  }}  $
                         
                           </div>  
                     
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                              <th scope="col">Order ID</th>
+                              <th scope="col">{{__('store.Order ID')}}</th>
                               {{-- <th scope="col">Name</th> --}}
-                              <th scope="col">Count</th>
-                              <th scope="col">Price</th>
-                              <th scope="col">Status </th>
-                              <th scope="col">Payment Method </th>
+                              <th scope="col">{{__('store.Count')}}</th>
+                              <th scope="col">{{__('store.Price')}}</th>
+                              <th scope="col">{{__('store.Status')}} </th>
+                              <th scope="col">{{__('store.Payment Method')}} </th>
 
                             </tr>
                           </thead>
@@ -61,13 +61,13 @@
                       <table class="table table-striped">
                         <thead>
                             <tr>
-                              <th scope="col">First Name</th>
-                              <th scope="col">Last Name</th>
-                              <th scope="col">Email</th>
-                              <th scope="col">Address </th>
-                              <th scope="col">City </th>
-                              <th scope="col">Country </th>
-                              <th scope="col">Phone Number </th>
+                              <th scope="col">{{__('store.First Name')}}</th>
+                              <th scope="col">{{__('store.Last Name')}}</th>
+                              <th scope="col">{{__('store.Email')}}</th>
+                              <th scope="col">{{__('store.Address')}} </th>
+                              <th scope="col">{{__('store.City')}} </th>
+                              <th scope="col">{{__('store.Country')}} </th>
+                              <th scope="col">{{__('store.Phone Number')}} </th>
                               <th scope="col">   </th>
                             </tr>
                           </thead>

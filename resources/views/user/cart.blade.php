@@ -15,10 +15,10 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                              <th scope="col">Order ID</th>
-                              <th scope="col">Name</th>
-                              <th scope="col">Product Count</th>
-                              <th scope="col">Price</th>
+                              <th scope="col">{{__('store.Order ID')}}</th>
+                              <th scope="col">{{__('store.Name')}}</th>
+                              <th scope="col">{{__('store.Product Count')}}</th>
+                              <th scope="col">{{__('store.Price')}}</th>
                               <th scope="col"  colspan="2">
                 
 
@@ -42,7 +42,7 @@
                                         
                                         <input type="number" value="1" name="Product_count" id="Product_count">
                                         
-                                        <button  class="btn btn-success"><i class="far fa-check-square"></i> Order Now!</button>
+                                        <button  class="btn btn-success"><i class="far fa-check-square"></i> {{__('store.Order Now!')}}</button>
                                     </strong></div>
                                 </div>
                                     
@@ -54,7 +54,7 @@
                                 
                             </td>
                                 <td>
-                                <a class="btn btn-danger" href="{{route('delete-from-cart',  $cart->id)}}" onClick="return confirm('Are you sure ?')"><i class="far fa-trash-alt"></i>  Delete from cart</a>
+                                <a class="btn btn-danger" href="{{route('delete-from-cart',  $cart->id)}}" onClick="return confirm('Are you sure ?')"><i class="far fa-trash-alt"></i>  {{__('store.Delete from cart')}}</a>
   
                               </td>
                             </tr>
@@ -63,7 +63,7 @@
                         <div class="container">
                             {{-- <form action="{{}}" method="post"> --}}
                                 {{-- @csrf --}}
-                                <a href="{{route('add-orders')}}" class="btn btn-success"><i class="far fa-check-square"></i> Order All Now!</a>
+                                <a href="{{route('add-orders')}}" class="btn btn-success"><i class="far fa-check-square"></i> {{__('store.Order All Now!')}}</a>
                                 {{-- <button type="submit" class="btn btn-success"><i class="far fa-check-square"></i> Order All Now!</button> --}}
                             {{-- </form> --}}
                         </div>

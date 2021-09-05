@@ -8,10 +8,10 @@
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">About Us</h3>
+                            <h3 class="footer-title">{{__('store.About Us')}}</h3>
                             <p>Lorem ipsum dolor sit amet</p>
                             <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>Egypt</a></li>
+                                <li><a href="#"><i class="fa fa-map-marker"></i>{{__('store.Egypt')}}</a></li>
                                 <li><a href="#"><i class="fa fa-phone"></i>010-6748-1567</a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> sh.elbalahy@gmail.com</a></li>
                             </ul>
@@ -20,13 +20,13 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Categories</h3>
+                            <h3 class="footer-title">{{__('store.Categories')}}</h3>
                             <ul class="footer-links">
-                                <li><a href="#">Hot deals</a></li>
-                                <li><a href="#">Laptops</a></li>
-                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">{{__('store.Hot deals')}}</a></li>
+                                <li><a href="#">{{__('store.Laptops')}}</a></li>
+                                <li><a href="#">{{__('store.Smartphones')}}</a></li>
                                 {{-- <li><a href="#">Cameras</a></li> --}}
-                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">{{__('store.Accessories')}}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -35,26 +35,26 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Information</h3>
+                            <h3 class="footer-title">{{__('store.Information')}}</h3>
                             <ul class="footer-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">{{__('store.About Us')}}</a></li>
+                                <li><a href="#">{{__('store.Contact Us')}}</a></li>
+                                <li><a href="#">{{__('store.Privacy Policy')}}</a></li>
+                                <li><a href="#">{{__('store.Orders and Returns')}}</a></li>
+                                <li><a href="#">{{__('store.Terms & Conditions')}}</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Service</h3>
+                            <h3 class="footer-title">{{__('store.Service')}}</h3>
                             <ul class="footer-links">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">View Cart</a></li>
-                                <li><a href="#">Wishlist</a></li>
-                                <li><a href="#">Track My Order</a></li>
-                                <li><a href="#">Help</a></li>
+                                <li><a href="#">{{__('store.My Account')}}</a></li>
+                                <li><a href="#">{{__('store.View Cart')}}</a></li>
+                                <li><a href="#">{{__('store.Wishlist')}}</a></li>
+                                <li><a href="#">{{__('store.Track My Order')}}</a></li>
+                                <li><a href="#">{{__('store.Help')}}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         @endauth
                         <span class="copyright">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Said Albalahy</a>
+                            {{__('store.Copyright')}} &copy;<script>document.write(new Date().getFullYear());</script> {{__('store.All rights reserved | This template is made with')}} <i class="fa fa-heart-o" aria-hidden="true"></i> {{__('store.by')}} <a href="#" target="_blank">Said Albalahy</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </span>
                     </div>

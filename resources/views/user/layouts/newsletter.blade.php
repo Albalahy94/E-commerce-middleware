@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="newsletter">
-                        <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+                        <p>{{__('store.Sign Up for the')}} <strong>{{__('store.NEWSLETTER')}}</strong></p>
                         <form>
                             <input class="input" type="email" placeholder="Enter Your Email">
-                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> {{__('store.Subscribe')}}</button>
                         </form>
                         <ul class="newsletter-follow">
                             <li>
