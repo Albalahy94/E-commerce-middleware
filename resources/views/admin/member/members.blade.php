@@ -3,8 +3,8 @@
 @extends('./admin/layouts/app')
 
 
-{{-- @section(__('login.Dashboard '), __('Medical Blog | Members '))  --}}
-@section("__('login.Dashboard ')" , "{{__('admin/members.Medical Blog | Members')}}") 
+{{-- @section(__('admin.Dashboard '), __('Medical Blog | Members '))  --}}
+@section("__('admin.Dashboard ')" , "{{__('admin.Medical Blog | Members')}}") 
 
 @section('content')
 
@@ -29,25 +29,25 @@
                           <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-4">
-                                    <h1 class="mt-4">{{__('admin/dash.All Members')}}</h1>
+                                    <h1 class="mt-4">{{__('admin.All Members')}}</h1>
                                     
 
 
                           <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                {{__('admin/dash.All Members')}} 
+                                {{__('admin.All Members')}} 
                             </div>
                             <div class="card-body">
                                 <table style="width: 100%" id="datatablesSimple">
                                     {{-- <table style="width: auto" class="table"> --}}
                                         <thead>
                                           <tr>
-                                            <th scope="col">{{__('admin/dash.ID')}} </th>
-                                            <th scope="col">{{__('login.Name')}} </th>
-                                            <th scope="col">{{__('login.E-Mail')}} </th>
+                                            <th scope="col">{{__('admin.ID')}} </th>
+                                            <th scope="col">{{__('admin.Name')}} </th>
+                                            <th scope="col">{{__('admin.E-Mail')}} </th>
 
-                                            <th style="text-align: center" scope="col" colspan="2">{{__('admin/dash.Edit')}}  </th>
+                                            <th style="text-align: center" scope="col" colspan="2">{{__('admin.Edit')}}  </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -57,7 +57,7 @@
                                             <td>{{Str::limit($user->name,  10, '...') }}</td>
                                             <td>{{Str::limit($user->email,  10, '...') }}  </td>
                                             <td style="text-align: center"> <a href="{{route('admin.edit-member', $user->id )}}"><i class="far fa-edit"></i> </a> </td>
-                                            <td style="text-align: center"> <a href="{{route('admin-delete-member', $user->id)}}" onClick="return confirm('Are you sure ?')"><i class="far fa-trash-alt"></i> </a>  </td>
+                                            <td style="text-align: center"> <a href="{{route('admin-delete-member', $user->id)}}" onClick="return confirm('{{__('Are you sure ?')}}')"><i class="far fa-trash-alt"></i> </a>  </td>
                                         </tr>
                                         @endforeach
                                      
@@ -67,7 +67,7 @@
                                 </div>
                                 <div style="text-align: right; with:100%;">
                                     <a href="{{route('admin.add-member')}}" type="button" class="btn btn-success" >
-                                      {{ __('admin/dash.Add Member') }}
+                                      {{ __('admin.Add Member') }}
                                     </a>
 
 

@@ -2,7 +2,7 @@
 
 
 {{-- @section(__('login.Dashboard '), __('Medical Blog | Members '))  --}}
-@section("__('login.Dashboard ')" , "{{__('Edit Product')}}")
+@section("__('login.Dashboard ')" , "{{ __('admin.Edit Product')}}")
 
 @section('content')
 
@@ -19,7 +19,7 @@
             @csrf
             <div class="card">
     <div class="mb-3">
-        <label for="" class="form-label"> {{__('Name')}} </label>
+        <label for="" class="form-label"> {{ __('admin.Name')}} </label>
         <input style="text-align: center" value="{{$product->name}}" type="text" name="name" class="form-control" id="" >
       </div>
         @if ($errors->any())
@@ -31,7 +31,7 @@
     @endif
 
       <div class="mb-3">
-        <label for="" class="form-label">  {{__('Description')}}</label>
+        <label for="" class="form-label">  {{ __('admin.Description')}}</label>
         <input style="text-align: center" value="{{$product->description}}" type="text" name="description" class="form-control" id="" >
       </div>
        @if ($errors->any())
@@ -43,7 +43,7 @@
   @endif
 
       <div class="mb-3">
-        <label for="" class="form-label">  {{__('Price')}} </label>
+        <label for="" class="form-label">  {{ __('admin.Price')}} </label>
         <input style="text-align: center" value="{{$product->price}}"  type="text" name="price" class="form-control" id="" >
    </div>
       @if ($errors->any())
@@ -55,7 +55,7 @@
   @endif
 
       <div class="mb-3">
-        <label for="" class="form-label"> {{__('user/dash.category')}} </label>
+        <label for="" class="form-label"> {{ __('admin.category')}} </label>
         <input style="text-align: center" value="{{$product->category}}" type="text" name="category" class="form-control" id="" >
     </div>
       @if ($errors->any())
@@ -68,10 +68,10 @@
 
   
   <div class="mb-3">
-    <label for="photo" class="form-label"> {{__('Photo')}}  </label>
+    <label for="photo" class="form-label"> {{ __('admin.Photo')}}  </label>
     <input   type="file" name="gallary" class="form-control" id="photo" >
 
-    <label for="photo" class="form-label"> {{__('Old photo')}}  </label> <br>
+    <label for="photo" class="form-label"> {{ __('admin.Old photo')}}  </label> <br>
    <div style="text-align: center">
     <td> <img width="500px"  height="500px" src="{{asset('images/products/' . $product->gallary)}}" alt="{{$product->name}}"> </td>
   </div>
@@ -85,7 +85,7 @@
 @endif
 
 
-  <button type="submit"  class="btn btn-success" > {{__('Update')}}  </button>
+  <button type="submit"  class="btn btn-success" > {{ __('admin.Update')}}  </button>
 </div>
   </form>
 
@@ -93,7 +93,7 @@
             </div>
             
           </div>
-          <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('return to dashboard ')}}  </a>
+          <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{ __('admin.return to dashboard')}}  </a>
     </div>
 
     @endsection

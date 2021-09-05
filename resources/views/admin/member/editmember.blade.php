@@ -1,7 +1,7 @@
 
 @extends('./admin/layouts/app')
 
-@section("{{__('login.Dashboard')}}" , "{{__('admin/editmember.Medical Blog | Edit Member')}}") 
+@section("{{__('login.Dashboard')}}" , "{{__('admin.Medical Blog | Edit Member')}}") 
 
 @section('content')
 
@@ -16,11 +16,11 @@
           <form method="POST" action="{{route('admin.update-member', $users->id)}}">
             @csrf
             <div class="card">
-                <div class="card-header">{{ __('admin/editmember.Edit Member') }}</div>
+                <div class="card-header">{{ __('admin.Edit Member') }}</div>
 
     <div class="mb-3">
 
-        <label for="" class="form-label"> {{__('admin/editmember.name')}}</label>
+        <label for="" class="form-label"> {{__('admin.name')}}</label>
         <input value="{{$users->name}}" type="text" name="name" class="form-control" id="" >
       </div>
 
@@ -34,7 +34,7 @@
 
 
       <div class="mb-3">
-        <label for="" class="form-label"> {{__('admin/editmember.email')}}</label>
+        <label for="" class="form-label"> {{__('admin.email')}}</label>
         <input value="{{$users->email}}" type="text" name="email" class="form-control" id=""  >
       </div>
 
@@ -47,7 +47,7 @@
   @endif
 
       <div class="mb-3">
-        <label for="" class="form-label">{{__('admin/editmember.password')}}  </label>
+        <label for="" class="form-label">{{__('admin.password')}}  </label>
         <input value="{{$users->password}}"  type="password" name="password" class="form-control" id="" >
       </div>
       @if ($errors->any())
@@ -60,7 +60,7 @@
 
   
   <div class="mb-3">
-    <label for="password-confirm" class="form-label ">{{ __('admin/editmember.Confirm Password') }}</label>
+    <label for="password-confirm" class="form-label ">{{ __('admin.Confirm Password') }}</label>
 
     <div class="mb-3">
         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -76,7 +76,7 @@
 
 
       
-      <button type="submit"  class="btn btn-success">{{__('admin/editmember.update')}}</button>
+      <button type="submit"  class="btn btn-success">{{__('admin.update')}}</button>
     </div>
   </form>
   
@@ -84,7 +84,7 @@
 
 
 </div>
-<a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('return to dashboard ')}}  </a>
+<a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('admin.return to dashboard')}}  </a>
 </div>
 @endsection
 

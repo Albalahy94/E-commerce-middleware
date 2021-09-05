@@ -3,8 +3,8 @@
 @extends('./admin/layouts/app')
 
 
-{{-- @section(__('login.Dashboard '), __('Medical Blog | Members '))  --}}
-@section("__('login.Dashboard ')" , "{{__(' Members')}}") 
+{{-- @section(__('admin.Dashboard '), __('Medical Blog | Members '))  --}}
+@section("__('admin.Dashboard ')" , "{{ __('admin.Members')}}") 
 
 @section('content')
 
@@ -19,7 +19,7 @@
               <table class="table">
                   <thead>
                       <tr>
-                        <th  scope="col" colspan="5">{{__('ID')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.ID')}} </th>
 
                       </tr>
                     </thead>
@@ -34,7 +34,7 @@
 
                     <thead>
                       <tr>
-                        <th  scope="col" colspan="5">{{__('Title')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.Title')}} </th>
                       
 
                       </tr>
@@ -52,7 +52,7 @@
                     <thead>
                       <tr>
                      
-                        <th  scope="col" colspan="5" >{{__('Delivery Status')}} </th>
+                        <th  scope="col" colspan="5" >{{ __('admin.Delivery Status')}} </th>
                       
 
                       </tr>
@@ -69,7 +69,7 @@
                     <thead>
                       <tr>
                     
-                        <th  scope="col" colspan="5">{{__('Cash Status')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.Cash Status')}} </th>
                      
 
                       </tr>
@@ -87,7 +87,7 @@
                     <thead>
                       <tr>
                   
-                        <th  scope="col" colspan="5">{{__('Payment Method')}}</th>
+                        <th  scope="col" colspan="5">{{ __('admin.Payment Method')}}</th>
                   
                       </tr>
                     </thead>
@@ -103,7 +103,7 @@
               <thead>
                 <tr>
             
-                  <th  scope="col" colspan="5">{{__('Total Price')}}</th>
+                  <th  scope="col" colspan="5">{{ __('admin.Total Price')}}</th>
             
                 </tr>
               </thead>
@@ -117,7 +117,7 @@
 
                     <thead>
                       <tr>
-                        <th  scope="col"  colspan="5"> {{__('Edit')}} </th>
+                        <th  scope="col"  colspan="5"> {{ __('admin.Edit')}} </th>
 
                       </tr>
                     </thead>
@@ -135,14 +135,14 @@
 
 
                 <a href="{{route('admin.add-order')}}" type="button" class="btn btn-success" >
-                  {{ __('Add Product') }}
+                  {{ __('admin.Add Product') }}
                 </a>
               </div>
           </div>
       </div>
       
     </div>
-    <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('return to dashboard ')}}  </a>
+    <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{ __('admin.return to dashboard')}}  </a>
 </div>
             @endsection
             

@@ -4,7 +4,7 @@
 
 
 {{-- @section(__('login.Dashboard '), __('Medical Blog | Members '))  --}}
-@section("__('login.Dashboard ')" , "{{__(' Members')}}") 
+@section("__('login.Dashboard ')" , "{{ __('admin. Members')}}") 
 
 @section('content')
 
@@ -19,7 +19,7 @@
               <table class="table">
                   <thead>
                       <tr>
-                        <th  scope="col" colspan="5">{{__('ID')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.ID')}} </th>
 
                       </tr>
                     </thead>
@@ -33,7 +33,7 @@
               </tbody>
                     <thead>
                       <tr>
-                        <th  scope="col" colspan="5">{{__('Name')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.Name')}} </th>
                       
 
                       </tr>
@@ -51,7 +51,7 @@
                     <thead>
                       <tr>
                      
-                        <th  scope="col" colspan="5" >{{__('Description')}} </th>
+                        <th  scope="col" colspan="5" >{{ __('admin.Description')}} </th>
                       
 
                       </tr>
@@ -68,7 +68,7 @@
                     <thead>
                       <tr>
                     
-                        <th  scope="col" colspan="5">{{__('Price')}} </th>
+                        <th  scope="col" colspan="5">{{ __('admin.Price')}} </th>
                      
 
                       </tr>
@@ -86,7 +86,7 @@
                     <thead>
                       <tr>
                   
-                        <th  scope="col" colspan="5">{{__('Category')}}</th>
+                        <th  scope="col" colspan="5">{{ __('admin.Category')}}</th>
                   
                       </tr>
                     </thead>
@@ -102,7 +102,7 @@
               <thead>
                 <tr>
             
-                  <th  scope="col" colspan="5">{{__('Photo')}}</th>
+                  <th  scope="col" colspan="5">{{ __('admin.Photo')}}</th>
             
                 </tr>
               </thead>
@@ -116,7 +116,7 @@
 
                     <thead>
                       <tr>
-                        <th  scope="col"  colspan="5"> {{__('Edit')}} </th>
+                        <th  scope="col"  colspan="5"> {{ __('admin.Edit')}} </th>
 
                       </tr>
                     </thead>
@@ -141,7 +141,7 @@
         </div>
         
       </div>
-      <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('return to dashboard ')}}  </a>
+      <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{ __('admin.return to dashboard')}}  </a>
     </div>
             @endsection
             

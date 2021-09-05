@@ -3,8 +3,8 @@
 @extends('./admin/layouts/app')
 
 
-{{-- @section(__('login.Dashboard '), __('Medical Blog | Members '))  --}}
-@section("__('login.Dashboard ')" , "{{__('admin/members.Medical Blog | Members')}}") 
+{{-- @section(__('admin.Dashboard '), __('Medical Blog | Members '))  --}}
+@section("__('admin.Dashboard ')" , "{{__('admin.Medical Blog | Members')}}") 
 
 @section('content')
 
@@ -29,28 +29,28 @@
                           <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-6">
-                                    <h1 class="mt-4">{{__('All Products')}}</h1>
+                                    <h1 class="mt-4">{{__('admin.All Products')}}</h1>
                                     
 
 
                           <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                {{__(' All Products')}} 
+                                {{__('admin.All Products')}} 
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple" style="    width: 100%;">
                                     {{-- <table style="width: auto" class="table"> --}}
                                         <thead>
                                           <tr>
-                                            <th scope="col">{{__('.ID')}} </th>
-                                            <th scope="col">{{__('Name')}} </th>
-                                            <th scope="col">{{__('Description')}} </th>
-                                            <th scope="col">{{__('Price')}} </th>
-                                            <th scope="col">{{__('Category')}} </th>
-                                            <th scope="col">{{__('Gallary')}} </th>
+                                            <th scope="col">{{__('admin.ID')}} </th>
+                                            <th scope="col">{{__('admin.Name')}} </th>
+                                            <th scope="col">{{__('admin.Description')}} </th>
+                                            <th scope="col">{{__('admin.Price')}} </th>
+                                            <th scope="col">{{__('admin.Category')}} </th>
+                                            <th scope="col">{{__('admin.Gallary')}} </th>
 
-                                            <th style="text-align: center" scope="col" colspan="2">{{__('Edit')}}  </th>
+                                            <th style="text-align: center" scope="col" colspan="2">{{__('admin.Edit')}}  </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div style="text-align: right; with:100%;">
                                     <a href="{{route('admin.add-product')}}" type="button" class="btn btn-success" >
-                                      {{ __('Add Product') }}
+                                      {{ __('admin.Add Product') }}
                                     </a>
 
                                 </div>
@@ -104,7 +104,7 @@
                 
                 
               </div>
-              <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{__('return to dashboard ')}}  </a>
+              <a class="btn btn-dark" href="{{route('Admin.dashboard')}}">  {{ __('admin.return to dashboard')}}  </a>
             </div>
             @endsection
             
