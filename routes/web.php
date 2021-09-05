@@ -47,6 +47,9 @@ Route::group([
     Route::get('/category_tab', [App\Http\Controllers\HomeController::class, 'category_tab'])->name('category_tab');
     Route::get('/category_acc', [App\Http\Controllers\HomeController::class, 'category_acc'])->name('category_acc');
     Route::get('/pending-members', function () {
+        if (Auth::user() && Auth::user()->pending == 0) {
+            return redirect('/');
+        }
         $orders = 0;
         return view('user.pendingmembers', ['orders' => $orders]);
     });
